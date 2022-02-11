@@ -1,0 +1,18 @@
+<form [formGroup] = "form" (ngSubmit)="processForm()">
+<div>
+ <div>
+  Title <br> <input id="title" size="30" formControlName="Title">
+ </div>
+  <div>
+    Ingredients <br> <input id="ingredients" size="30" formControlName="Ingredients">
+  </div>
+  <div>
+    Instructions <br> <textarea id="instructions" rows="4" cols="50" formControlName="Instructions" ></textarea>
+  </div>
+  <div>
+    Image URL <br> <input id="image" size="30" formControlName="Image">
+  </div>
+ </div>
+ <button [routerLink]="['']">Back</button>
+ <button type="submit" [disabled]="form.invalid">Add</button>
+</form>

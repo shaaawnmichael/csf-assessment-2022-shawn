@@ -1,0 +1,17 @@
+<div>
+  <div >
+    {{recipe.title}}
+  </div> <br>
+  <div>
+    <img src={{recipe.image}} width=50%>
+  </div> <br>
+  Ingredients:
+  <ol>
+    <li *ngFor="let recipeing of recipe.ingredients">{{recipeing}}</li>
+  </ol>
+  <div>
+    Instructions: <br> <br>
+    {{recipe.instruction}}
+  </div>
+<button [routerLink]="['']">Back</button>
+</div>
