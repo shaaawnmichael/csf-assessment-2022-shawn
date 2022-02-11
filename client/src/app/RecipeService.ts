@@ -10,7 +10,8 @@ export class RecipeService {
 
   getAllRecipes(): Promise<Recipes[]> {
     return lastValueFrom(
-      this.http.get<Recipes[]>(`http://localhost:8080/api/recipes`)
+      //this.http.get<Recipes[]>(`http://localhost:8080/api/recipes`)
+      this.http.get<Recipes[]>(`/api/recipes`)
     ).then (r =>
       r.map(r2 => ({id: r2.id, title: r2.title} as Recipes)))
   }
